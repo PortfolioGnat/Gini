@@ -6,4 +6,4 @@
 
 # Dataset Projects:
 
-[Gini Coefficient Dataset](https://portfoliognat.github.io/Gini/)
+[MPG (Miles Per Gallon) Dataset](https://portfoliognat.github.io/MPG/)
