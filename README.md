@@ -3,7 +3,7 @@ ___
 # Gini Coefficient Dataset
 Below you will find different examples of visualizations that pull from a dataset called Gini.\
 But...What is the Gini Coefficient?\
-In economics, the [Gini Coefficient](https://en.wikipedia.org/wiki/Gini_coefficient), also known as the Gini Index or Gini Ratio, measures income, wealth, or consumption inequality within a particular nation or social group.\
+In economics, the [Gini Coefficient](https://en.wikipedia.org/wiki/Gini_coefficient), also known as the Gini Index or Gini Ratio, measures income, wealth, or consumption inequality within a particular nation or social group.
 
 The different Columns that we will be focusing on are as follows:
 1. Country Name
