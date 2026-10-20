@@ -4,7 +4,7 @@ ___
 Below you will find different examples of visualizations that pull from a dataset called Gini.\
 But...What is the Gini Coefficient?\
 In economics, the [Gini Coefficient](https://en.wikipedia.org/wiki/Gini_coefficient), also known as the Gini Index or Gini Ratio, is intended to represent the measure of income inequality, wealth inequality, or consumption inequality within a particular nation or social group.
-The different categories that we will be focusing on are as follows:\
+The different categories that we will be focusing on are as follows:
 
 1. manufacturer = manufacturer name
 2. model = model name
