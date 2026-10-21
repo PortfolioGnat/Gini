@@ -25,7 +25,7 @@ Most percentages of inequality range from twenty to sixty percent, with some out
 
 ### It looks readable initially, but it lacks the specificity needed to tell a clear, tangible story. There are also a few aesthetic elements that could definitely be improved upon.
 ___
-## RStudio Code for MPG Example:
+## RStudio Code for Gini Coefficient Initial Attempt:
 
 # Directory:
 
