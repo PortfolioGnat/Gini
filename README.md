@@ -27,6 +27,30 @@ Most percentages of inequality range from twenty to sixty percent, with some out
 ___
 ## RStudio Code for Initial Attempt:
 
+gini <-read.csv('shared/gini.csv')
+> This loads the gini coefficient dataset into RStudio.
+
+View(gini)
+> Displays the dataset as a table in a separate window within RStudio.
+
+View(mpg)
+> Displays the dataset as a readable spreadsheet in the software.
+
+mplot(mpg)
+> Runs through the dataset and asks how you would like the information to be displayed, as shown:
+
+1: 1-variable (histogram, density plot, etc.)\
+2: 2-variable (scatter, boxplot, etc.)
+> Select one by entering a value for the visualization you would like to create.
+
+Selection: 2
+> I chose the second value to produce a scatterplot
+
+Once I enter the desired values in the "Manipulate" pop-up using the gear icon, the expression of the visualization is as follows:
+> gf_point(hwy ~ displ, data = mpg) |>\
+>   gf_facet_wrap(~ class, ncol = 4) |>\
+>   gf_labs(title = "", caption = "")
+
 # Directory:
 
 ### [Go Back Home](https://portfoliognat.github.io/Home/)
