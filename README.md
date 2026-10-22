@@ -63,17 +63,20 @@ long_gini$Year_Numerical <- as.numeric(long_gini$Year_Numerical)
 long_gini$USA <- ifelse(long_gini$Country.Name=='United States', 'USA', 'Other Countries')
 > This creates a new column that differentiates between USA and "Other Countries" by utilizing if/else statements. Example: if USA = TRUE, else = FALSE = Other Countries.
 
+mplot(long_gini)
+> This asks the software to plot the data as a visualization. It then prompts you with the following:
+
 1: 1-variable (histogram, density plot, etc.)\
 2: 2-variable (scatter, boxplot, etc.)
 > Select one by entering a value for the visualization you would like to create.
 
 Selection: 2
-> I chose the second value to produce a scatterplot
+> I chose the second value to produce a scatterplot.
 
 Once I enter the desired values in the "Manipulate" pop-up using the gear icon, the expression of the visualization is as follows:
-> gf_point(hwy ~ displ, data = mpg) |>\
->   gf_facet_wrap(~ class, ncol = 4) |>\
->   gf_labs(title = "", caption = "")
+> gf_point(Gini_Coeff ~ Year_Numerical, data = long_gini, color = ~ USA) |>\
+  > gf_theme(legend.position = "right") |>\
+  > gf_labs(title = "", caption = "")
 
 # Directory:
 
