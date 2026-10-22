@@ -21,7 +21,7 @@ Most percentages of inequality range from twenty to sixty percent, with some out
 2. I also wished that there were lines ([smoothing](https://en.wikipedia.org/wiki/Smoothing)) going through the points that correspond to their respective countries, even if it were to be non-descript.
 3. It would allow for some type of visualization by way of trends and to see more clearly what countries had missing data through a specific period of time.
 4. The visualization can also be cleaned up by eliminating the underscores in the names of the variables on the x and y axes.
-5. It could have used its own title defining and further depicting/explaining what the visual is pertaining to.
+5. It could have used its own title defining and further depicting/explaining what the visual pertains to.
 
 ### It looks readable initially, but it lacks the specificity needed to tell a clear, tangible story. There are also a few aesthetic elements that could definitely be improved upon.
 ___
@@ -61,8 +61,7 @@ long_gini$Year_Numerical <- as.numeric(long_gini$Year_Numerical)
 > The code that was copied into the "Year_Numerical column gets converted into strictly numerical values by excluding the "x" variable that we originally started with.
 
 long_gini$USA <- ifelse(long_gini$Country.Name=='United States', 'USA', 'Other Countries')
-> This creates a new column that differentiates between USA and "Other Countries" by utilizing if/else statements./
-Exmaple: If USA = TRUE, Else = Other Countries.
+> This creates a new column that differentiates between USA and "Other Countries" by utilizing if/else statements. Exmaple: If USA = TRUE, Else = FALSE = Other Countries.
 
 1: 1-variable (histogram, density plot, etc.)\
 2: 2-variable (scatter, boxplot, etc.)
