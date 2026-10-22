@@ -40,7 +40,29 @@ library(tidyr)
 > Loads a new package into RStudio.
 
 long_gini <- gini %>% pivot_longer(cols = starts_with('X'),names_to = 'Year',values_to = 'Gini_Coeff')
->>>>>>>>>>>>>>>>>>>>>>>>>>>>
+> Converts the dataset from wide to long format by creating a new separate spreadsheet called "long_gini".
+
+long_gini$Indicator.Code <- NULL
+> Deletes the "Indicator Code" column that contains irrelevant information.
+
+long_gini$Indicator.Name <- NULL
+> Deletes the "Indicator Name" column that contains irrelevant information.
+
+long_gini$Country.Code <- NULL
+> Deletes the "Country Code" column that contains irrelevant information.
+
+long_gini <- long_gini %>% filter(!is.na(Gini_Coeff))
+> This deletes all the N/A rows in the "Gini_Coeff" column.
+
+long_gini$Year_Numerical <- substr(long_gini$Year, nchar(long_gini$Year) - 3, nchar(long_gini$Year))
+> This code extracts all the values from the "Year" column in the "long_gini" dataset and saves it as a new column named "Year_Numerical".
+
+long_gini$Year_Numerical <- as.numeric(long_gini$Year_Numerical)
+> The code that was copied into the "Year_Numerical column gets converted into strictly numerical values by excluding the "x" variable that we originally started with.
+
+long_gini$USA <- ifelse(long_gini$Country.Name=='United States', 'USA', 'Other Countries')
+> This creates a new column that differentiates between USA and "Other Countries" by utilizing if/else statements./
+Exmaple: If USA = TRUE, Else = Other Countries.
 
 1: 1-variable (histogram, density plot, etc.)\
 2: 2-variable (scatter, boxplot, etc.)
