@@ -61,7 +61,7 @@ long_gini$Year_Numerical <- as.numeric(long_gini$Year_Numerical)
 > The code that was copied into the "Year_Numerical column gets converted into strictly numerical values by excluding the "x" variable that we originally started with.
 
 long_gini$USA <- ifelse(long_gini$Country.Name=='United States', 'USA', 'Other Countries')
-> This creates a new column that differentiates between USA and "Other Countries" by utilizing if/else statements. Exmaple: If USA = TRUE, Else = FALSE = Other Countries.
+> This creates a new column that differentiates between USA and "Other Countries" by utilizing if/else statements. Example: if USA = TRUE, else = FALSE = Other Countries.
 
 1: 1-variable (histogram, density plot, etc.)\
 2: 2-variable (scatter, boxplot, etc.)
