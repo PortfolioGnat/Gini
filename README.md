@@ -33,11 +33,14 @@ gini <-read.csv('shared/gini.csv')
 View(gini)
 > Displays the dataset as a table in a separate window within RStudio.
 
-View(mpg)
-> Displays the dataset as a readable spreadsheet in the software.
+gini <- gini[, colSums(is.na(gini)) != nrow(gini)]
+> Removes the columns that are full of N/A's
 
-mplot(mpg)
-> Runs through the dataset and asks how you would like the information to be displayed, as shown:
+library(tidyr)
+> Loads a new package into RStudio.
+
+long_gini <- gini %>% pivot_longer(cols = starts_with('X'),names_to = 'Year',values_to = 'Gini_Coeff')
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 1: 1-variable (histogram, density plot, etc.)\
 2: 2-variable (scatter, boxplot, etc.)
