@@ -9,7 +9,7 @@ In economics, the [Gini Coefficient](https://en.wikipedia.org/wiki/Gini_coeffici
 
 ## The image shows the Gini coefficient at a certain numerical year. It has also been color-coded based on whether or not it is the USA or "Other Countries".
 
-I decided to create a scatterplot. This scatterplot shows the Gini coefficient in the USA against the rest of the world. For the USA, wealth inequality started lower and then rose by about 10%.\
+I decided to create a scatterplot as it shows the Gini coefficient in the USA comparatively to the rest of the world. For the USA, wealth inequality started lower and then rose by about 10%.\
 As for the other countries, it seems that a lot of them that are placed towards the bottom of the scatterplot follow a similar pattern despite the inability to tell them apart.\
 Another pattern for the "Other Countries" is that the higher the wealth inequality, the more sporadic the information gets.\
 This could also be because countries with higher economic inequality failed to report their Gini coefficient consistently throughout the years. However, it can have multiple contributing unknown factors, which is why this visualization may be difficult to read.\
