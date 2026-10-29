@@ -153,6 +153,11 @@ Selection: 2
 > I chose the second value to produce a scatterplot.
 
 Once I enter the desired values in the "Manipulate" pop-up using the gear icon, the expression of the visualization is as follows:
+> gf_point(Gini_Coeff ~ Year_Numerical, data = caribbean_gini, color = ~ Country.Name) |>\
+gf_smooth() |>\
+gf_theme(legend.position = "right") |>\
+gf_labs(title = "", caption = "")\
+`geom_smooth()` using method = 'loess' 
 
 # Directory:
 
