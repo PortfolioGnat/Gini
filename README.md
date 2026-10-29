@@ -98,7 +98,41 @@ Something I did not like in this visualization was the lack of data. It was a li
 ___
 ## RStudio Code for Second Attempt:
 
-> The code here will be continuing from where we left off for the code in "Visualization 1: Initial Attempt".
+gini <-read.csv('shared/gini.csv')
+> This loads the gini coefficient dataset into RStudio.
+
+View(gini)
+> Displays the dataset as a table in a separate window within RStudio.
+
+gini <- gini[, colSums(is.na(gini)) != nrow(gini)]
+> Removes the columns that are full of N/A's
+
+library(tidyr)
+> Loads a new package into RStudio.
+
+long_gini <- gini %>% pivot_longer(cols = starts_with('X'),names_to = 'Year',values_to = 'Gini_Coeff')
+> Converts the dataset from wide to long format by creating a new separate spreadsheet called "long_gini".
+
+View(long_gini)
+> Displays the dataset as a table in a separate window within RStudio.
+
+long_gini$Indicator.Code <- NULL
+> Deletes the "Indicator Code" column that contains irrelevant information.
+
+long_gini$Indicator.Name <- NULL
+> Deletes the "Indicator Name" column that contains irrelevant information.
+
+long_gini$Country.Code <- NULL
+> Deletes the "Country Code" column that contains irrelevant information.
+
+long_gini <- long_gini %>% filter(!is.na(Gini_Coeff))
+> This deletes all the N/A rows in the "Gini_Coeff" column.
+
+long_gini$Year_Numerical <- substr(long_gini$Year, nchar(long_gini$Year) - 3, nchar(long_gini$Year))
+> This code extracts all the values from the "Year" column in the "long_gini" dataset and saves it as a new column named "Year_Numerical".
+
+long_gini$Year_Numerical <- as.numeric(long_gini$Year_Numerical)
+> The code that was copied into the "Year_Numerical column gets converted into strictly numerical values by excluding the "x" variable that we originally started with.
 
 caribbean_gini <- filter(long_gini, Country.Name=='Barbados' | Country.Name=='Belize' | Country.Name=='Dominican Republic' | Country.Name=='Guyana' | Country.Name=='Haiti' | Country.Name=='Jamaica' | Country.Name=='Suriname' | Country.Name=='Trinidad and Tobago')
 > I reverse-engineered this line of code from the classroom exercise code provided:\
@@ -119,9 +153,6 @@ Selection: 2
 > I chose the second value to produce a scatterplot.
 
 Once I enter the desired values in the "Manipulate" pop-up using the gear icon, the expression of the visualization is as follows:
-> gf_point(Gini_Coeff ~ Year_Numerical, data = long_gini, color = ~ USA) |>\
-  > gf_theme(legend.position = "right") |>\
-  > gf_labs(title = "", caption = "")
 
 # Directory:
 
