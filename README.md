@@ -78,17 +78,15 @@ Once I enter the desired values in the "Manipulate" pop-up using the gear icon, 
   > gf_theme(legend.position = "right") |>\
   > gf_labs(title = "", caption = "")
 
-# **Visualization 1: Initial Attempt**
-![Visualization 1](/gini1.png)
+# **Visualization 2: Second Attempt**
+![Visualization 2](/gini2.png)
 
-## The image shows the Gini coefficient at a certain numerical year. It has also been color-coded based on whether or not it is the USA or "Other Countries".
+## The image shows the Gini coefficients for all of the Caribbean countries included in the dataset at certain numerical years. It has also been color-coded by individual country.
 
-I decided to create a scatterplot as it shows the Gini coefficient in the USA comparatively to the rest of the world. For the USA, wealth inequality started lower and then rose by about 10%.\
-As for the other countries, it seems that a lot of them that are placed towards the bottom of the scatterplot follow a similar pattern despite the inability to tell them apart.\
-Another pattern for the "Other Countries" is that the higher the wealth inequality, the more sporadic the information gets.\
-This could also be because countries with higher economic inequality failed to report their Gini coefficient consistently throughout the years. However, it can have multiple contributing unknown factors, which is why this visualization may be difficult to read.\
-Generally, when you look at the data as one body of information, you can only take away that economic inequality is spread so far beyond the scope of anything interpretable in this state, excluding the trend of the Gini Coefficient in the United States.\
-Most percentages of inequality range from twenty to sixty percent, with some outliers reaching seventy and one slightly above that.
+For visualization two, I chose a smoothed scatterplot. In this visualization, the information that is depicted is the numerical year on the x-axis, the Gini coefficient on the y-axis, all color-coded by country as depicted by the guide. Here I focused on Caribbean countries to make the country list shorter, but to also selfishly discover more unique information about the area of the world that I come from.\
+In the visualization, you can really see which countries lacked data, as those were not smoothed and only had one or two data points. As for the data that was able to be smoothed, there isn’t much of a pattern. The only identifiable pattern or similarity is really shared between Belize and Jamaica. They fluctuate in dramatic ups and downs but even still, they are not truly similar enough to be an interesting pattern.\
+I can appreciate the fact that almost all countries start with or are headed towards more economic equality as economic equality is always amazing. However, an interesting deviation from that trend would be Belize. In Belize’s data, you can truly see how they started with a steep slope of economic inequality. Historically, Belize was invaded and occupied by British colonial rulers and greedy timber corporations that came to steal resources from Belize, hence the bad head start as depicted. The big three contributing factors post-research I would say are: how land was cut up disproportionately to satisfy the timber corporations' needs, most of the population being stuck in low-wage jobs, as well as having a singular resource export-driven industry.
+Something I did not like in this visualization was the lack of data. It was a little disappointing to not have as much data to work with. Another thing that I did not enjoy was not being able to figure out how to make the unsmoothed points larger in the spirit of better depicting and differentiating them from the data points of smoothed countries as shown. I think it can get a little confusing when looking at it because some points are too close to one another. The singular or dual-pointed data is the easiest to miss due to data points being aesthetically similar in both color and size.
 
 ## Notes/Commentary:
 1. Something that I personally did not enjoy about this visualization is how many countries are included. There is only so much space given to depict tangible information while loading it with as many perspectives as possible.
